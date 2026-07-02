@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* ── Custom animations for AnalysisResult ───────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealIn {
+  from { opacity: 0; transform: translateX(12px) scale(0.99); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* Tailwind v4 arbitrary animation value support */
+@theme {
+  --animate-fade-in:   fadeIn 0.3s ease forwards;
+  --animate-reveal-in: revealIn 0.25s ease forwards;
+}
